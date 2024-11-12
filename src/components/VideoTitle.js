@@ -1,4 +1,6 @@
 import React from "react";
+import play_icon from ".././assets/play_icon.png";
+import info_icon from ".././assets/info_icon.png";
 
 const VideoTitle = ({ title, overview }) => {
   return (
@@ -9,14 +11,11 @@ const VideoTitle = ({ title, overview }) => {
       </p>
       <div className="mt-6 flex gap-4">
         <button className="flex items-center bg-white text-black font-bold text-lg py-2 md:py-2.5 px-4 md:px-10 hover:bg-slate-300 cursor-pointer rounded-lg">
-          <img
-            src="https://miro.medium.com/v2/da:true/resize:fit:768/1*IDJ4x4E-bOypnEZdA5TGHQ.gif"
-            alt="play"
-            className="w-8 h-8 mr-2"
-          />
+          <img src={play_icon} alt="play" className="w-6 h-6 mr-2" />
           Play
         </button>
-        <button className="hidden sm:block md:inline-block bg-gray-800 text-white text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-10 hover:bg-slate-900 cursor-pointer rounded-lg">
+        <button className="hidden sm:flex items-center md:inline-flex bg-gray-800 text-white text-lg font-bold py-2 md:py-2.5 px-4 md:px-7 hover:bg-slate-900 cursor-pointer rounded-lg">
+          <img src={info_icon} alt="info" className="w-6 h-6 mr-2" />
           More Info
         </button>
       </div>

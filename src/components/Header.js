@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO_URL } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
+import profile_img from ".././assets/profile_img.png";
+import logo from ".././assets/logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -62,7 +63,7 @@ const Header = () => {
         isScrolled ? "bg-opacity-80 bg-black" : "bg-gradient-to-b from-black"
       }`}
     >
-      <img className="w-24 md:w-56" src={LOGO_URL} alt="logo" />
+      <img className="w-24 md:w-44 mt-2" src={logo} alt="logo" />
 
       {user && (
         <div className="hidden md:flex flex-1 justify-center text-white font-medium mr-64 pr-64">
@@ -85,8 +86,8 @@ const Header = () => {
             {showGptSearch ? "Home" : "Search Movies"}
           </button>
           <img
-            className="w-7 h-7 md:w-10 md:h-10 rounded-full md:rounded-md"
-            src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
+            className="w-7 h-7 md:w-10 md:h-10 rounded-full md:rounded-md cursor-pointer"
+            src={profile_img}
             alt="user-logo"
           />
           <button

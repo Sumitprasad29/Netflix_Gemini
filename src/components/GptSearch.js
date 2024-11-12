@@ -1,7 +1,7 @@
 import React from "react";
 import GptSearchBar from "./GptSearchBar";
 import GptMovieSuggestion from "./GptMovieSuggestion";
-import { SEARCH_TAB_IMG } from "../utils/constants";
+import Search_tab_img from ".././assets/Search_tab_img.jpg";
 
 const GptSearch = () => {
   return (
@@ -9,7 +9,7 @@ const GptSearch = () => {
       <div className="fixed -z-10">
         <img
           className="h-screen object-cover md:h-full"
-          src={SEARCH_TAB_IMG}
+          src={Search_tab_img}
           alt="bg-logo"
         />
       </div>

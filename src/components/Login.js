@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { BG_URL } from "../utils/constants";
+import background_banner from ".././assets/background_banner.jpg";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -71,7 +71,7 @@ const Login = () => {
       <div className="absolute w-full h-full">
         <img
           className="h-screen object-cover md:w-full md:h-full"
-          src={BG_URL}
+          src={background_banner}
           alt="bg-img"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black opacity-85"></div>
